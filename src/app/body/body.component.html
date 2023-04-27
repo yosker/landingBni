@@ -1,0 +1,17 @@
+<div class="card text-center">
+  <div class="card-header">
+    <h1>{{ userName }}</h1>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Prasyde SC</h5>
+    <p class="card-text">Desarrollo de Software</p>
+    <qrcode
+      [qrdata]="myAngularxQrCode"
+      [width]="300"
+      [errorCorrectionLevel]="'M'"
+      [margin]="1"
+      [scale]="1"
+    ></qrcode>
+  </div>
+  <h5 class="card-footer text-muted">{{ scan }}</h5>
+</div>
