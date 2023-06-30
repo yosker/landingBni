@@ -1,17 +1,32 @@
-<div class="card text-center">
-  <div class="card-header">
-    <h1>{{ userName }}</h1>
+<div class="container-fluid office-theme">
+  <div class="row">
+    <div class="col-md-6 offset-md-3 text-center d-flex flex-column align-items-center justify-content-center vh-100">
+      <hr>
+
+      <div class="row animated fadeIn fast">
+        <div class="col-md-4">
+          <img src="assets/img/batman.png" class="img-fluid circular-image" [alt]="user.name">
+          <small class="white-text">{{ user.name | uppercase }}</small>
+          <small class="white-text"> ({{ user.profession }})</small>
+        </div>
+
+        <div class="col-md-8">
+          <h3 class="white-text">{{ user.companyName }}</h3>
+          <hr>
+          <p class="white-text">
+            {{ scan }}
+          </p>
+          <div class="qr-code">
+            <qrcode
+              [qrdata]="myAngularxQrCode"
+              [width]="200"
+              [errorCorrectionLevel]="'M'"
+              [margin]="1"
+              [scale]="1"
+            ></qrcode>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="card-body">
-    <h5 class="card-title">Prasyde SC</h5>
-    <p class="card-text">Desarrollo de Software</p>
-    <qrcode
-      [qrdata]="myAngularxQrCode"
-      [width]="300"
-      [errorCorrectionLevel]="'M'"
-      [margin]="1"
-      [scale]="1"
-    ></qrcode>
-  </div>
-  <h5 class="card-footer text-muted">{{ scan }}</h5>
 </div>

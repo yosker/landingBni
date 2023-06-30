@@ -1,0 +1,21 @@
+.office-theme {
+  background-color: #d84343;
+  padding: 20px;
+}
+
+.qr-code {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.circular-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  clip-path: circle(50%);
+}
+
+.white-text {
+  color: white;
+}
