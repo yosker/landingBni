@@ -1,32 +1,38 @@
-<div class="container-fluid office-theme">
-  <div class="row">
-    <div class="col-md-6 offset-md-3 text-center d-flex flex-column align-items-center justify-content-center vh-100">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check-In</title>
+  <link rel="stylesheet" href="body.component.css"> <!-- Agrega tu hoja de estilos aquí -->
+</head>
+<body>
+  <div class="badge">
+    <div class="header">
+      <h1>BNI</h1>
+    </div>
+    <div class="user-profile">
+      <img src="assets/img/batman.png" class="img-fluid circular-image" [alt]="user.name">
+      <div class="info">
+        <p><strong>Nombre:</strong> {{ user.userName }}</p>
+        <p><strong>Número de Empleado:</strong> {{ user.profession }}</p>
+        <p><strong>Área:</strong> {{ user.companyName }}</p>
+      </div>
+    </div>
+    <div class="company-details">
+      <h3>{{ user.companyName }}</h3>
       <hr>
-
-      <div class="row animated fadeIn fast">
-        <div class="col-md-4">
-          <img src="assets/img/batman.png" class="img-fluid circular-image" [alt]="user.name">
-          <small class="white-text">{{ user.name | uppercase }}</small>
-          <small class="white-text"> ({{ user.profession }})</small>
-        </div>
-
-        <div class="col-md-8">
-          <h3 class="white-text">{{ user.companyName }}</h3>
-          <hr>
-          <p class="white-text">
-            {{ scan }}
-          </p>
-          <div class="qr-code">
-            <qrcode
-              [qrdata]="myAngularxQrCode"
-              [width]="200"
-              [errorCorrectionLevel]="'M'"
-              [margin]="1"
-              [scale]="1"
-            ></qrcode>
-          </div>
-        </div>
+      <p>{{ scan }}</p>
+      <div class="qr-code">
+        <qrcode
+          [qrdata]="myAngularxQrCode"
+          [width]="200"
+          [errorCorrectionLevel]="'M'"
+          [margin]="1"
+          [scale]="1"
+        ></qrcode>
       </div>
     </div>
   </div>
-</div>
+</body>
+</html>

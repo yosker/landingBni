@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class UsersService {
   private url =
-    'http://11b3-2806-2f0-93c1-f1b4-e522-9735-260b-5afd.eu.ngrok.io:3000/users';
+    'http://c5b7-2806-2f0-93c1-f1b4-81cd-b467-47b3-19ac.ngrok-free.app:3000/users';
   constructor(private http: HttpClient) {}
 
   register(userId: string, chapterId: string) {

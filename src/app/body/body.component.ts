@@ -12,7 +12,7 @@ export class BodyComponent implements OnInit {
   user: any = {};
 
   myAngularxQrCode: any;
-  private url = `http://localhost:3000/users`;
+  private url = `http://c5b7-2806-2f0-93c1-f1b4-81cd-b467-47b3-19ac.ngrok-free.app/users`;
   userName = 'Hola!';
   scan = 'Escanea el código QR con tu smartphone.';
   error: any;
